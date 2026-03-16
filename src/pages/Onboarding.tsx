@@ -31,8 +31,9 @@ export const Onboarding = () => {
 
             {/* Content Section */}
             <div className="flex flex-col flex-1 px-6 pt-8 pb-10">
+                <img src="/auchanlogo.png" alt="Auchan Logo" className="h-10 mx-auto mb-6 object-contain" />
                 <h1 className="text-auchan-red tracking-tight text-3xl font-extrabold leading-tight text-center pb-8">
-                    Unlock Auchan Family Mode
+                    Unlock Family Mode
                 </h1>
                 
                 {/* Features List */}

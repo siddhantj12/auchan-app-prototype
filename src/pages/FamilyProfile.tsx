@@ -109,27 +109,22 @@ export const FamilyProfile = () => {
                     </div>
                 </div>
 
-                {/* Family Mode Toggle */}
-                <div className="m-4 bg-white rounded-xl p-4 flex items-center justify-between shadow-sm border border-slate-100">
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center">
-                            <Users size={20} className="text-auchan-red" />
-                        </div>
-                        <div>
-                            <p className="font-bold text-sm">Family Mode</p>
-                            <p className="text-xs text-slate-500">Unlock family-only benefits</p>
-                        </div>
-                    </div>
-                    <label className="relative flex h-7 w-12 cursor-pointer items-center rounded-full bg-red-100 p-1 transition-colors">
-                        <input 
-                            type="checkbox" 
-                            className="sr-only peer" 
-                            checked={familyMode}
-                            onChange={(e) => setFamilyMode(e.target.checked)}
-                        />
-                        <div className={`h-5 w-5 rounded-full bg-white shadow-md transition-all ${familyMode ? 'translate-x-5 bg-auchan-red' : ''}`} />
-                        <div className={`absolute inset-0 rounded-full transition-colors ${familyMode ? 'bg-auchan-red' : 'bg-slate-200'} -z-10`} />
-                    </label>
+                {/* Family Mode Toggle Button */}
+                <div className="mx-4 my-4">
+                    <button 
+                        onClick={() => {
+                            setFamilyMode(!familyMode);
+                            triggerToast(familyMode ? 'Family Mode Disabled' : 'Family Mode Activated');
+                        }}
+                        className={`w-full flex items-center justify-center gap-3 font-bold py-4 rounded-xl shadow-lg transition-all active:scale-[0.98] ${
+                            familyMode 
+                            ? 'bg-red-800 text-white shadow-red-900/20' 
+                            : 'bg-auchan-red hover:bg-red-700 text-white shadow-red-500/20'
+                        }`}
+                    >
+                        <Users size={20} />
+                        {familyMode ? 'Family Mode Active' : 'Activate Family Mode'}
+                    </button>
                 </div>
 
                 {/* Family Members Carousel */}
@@ -158,10 +153,10 @@ export const FamilyProfile = () => {
                         ))}
                         {/* Add New */}
                         <button onClick={() => setIsAddingMember(true)} className="flex flex-col items-center min-w-[80px] group pt-1 cursor-pointer">
-                            <div className="w-14 h-14 rounded-2xl border-2 border-dashed border-slate-300 flex items-center justify-center mb-2 group-hover:bg-slate-50 transition-colors">
-                                <Plus size={24} className="text-slate-400" />
+                            <div className="w-14 h-14 rounded-2xl bg-auchan-red shadow-md shadow-red-500/30 flex items-center justify-center mb-2 group-hover:scale-105 active:scale-95 transition-all">
+                                <Plus size={24} className="text-white" />
                             </div>
-                            <p className="text-sm font-medium text-slate-400 mt-1">Add</p>
+                            <p className="text-sm font-bold text-auchan-red mt-1">Add</p>
                         </button>
                     </div>
                 </div>

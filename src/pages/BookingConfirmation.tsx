@@ -104,7 +104,7 @@ export const BookingConfirmation = () => {
                         <div className="absolute top-0 left-0 right-0 h-2 bg-slate-50 border-t border-slate-200 before:bg-white before:absolute before:inset-0 before:-top-1 before:h-2" style={{ clipPath: 'polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%, 100% 100%, 0% 100%)', backgroundColor: 'white', marginTop: '-8px' }}></div>
                         
                         <div className="p-6 pt-8 pb-4 border-b-2 border-dashed border-slate-300">
-                            <h2 className="text-center font-bold text-xl mb-1 tracking-widest">AUCHAN</h2>
+                            <img src="/auchanlogo.png" alt="Auchan Logo" className="h-6 mx-auto mb-2 object-contain" />
                             <p className="text-center text-slate-500 mb-6">Soroksár Hypermarket<br/>1239 Budapest</p>
                             
                             <div className="mb-4">
