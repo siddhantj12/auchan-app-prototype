@@ -1,0 +1,111 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Family Mode Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6001b",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#230f11",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col bg-white dark:bg-background-dark overflow-x-hidden max-w-md mx-auto">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Family Mode</h2>
+</div>
+<!-- Hero Image Section -->
+<div class="px-0 @container">
+<div class="w-full h-80 bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden" data-alt="Happy family participating in a cooking workshop together" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxbhRzgDuRNlj18QqHLVEV0cW55Fr7SAzzD5JyNtz7Ixk89NE-bRoGq_ykO9W-ykunZpbXVNZ2g1--eynZhzcGEPNbQS69AjBplOnAYFkenRDUcao9H7Jv8aqpowFeh6xNUS-phLDcNqbPRtYnl_XbNf4ePDLvV5rDKyLzLc4Ho3uR3mv-R9UGm6r-bK4BEVRbq_e5_JEaFirNq5PkYEXqq19xdG7UlrlQVMKZglgbgB3wh4YlLrVn94-bRnkORICHvnS2AqU1-wU");'>
+</div>
+</div>
+<!-- Content Section -->
+<div class="flex flex-col flex-1 px-6 pt-8 pb-10">
+<h1 class="text-primary tracking-tight text-3xl font-extrabold leading-tight text-center pb-8">
+                Unlock Auchan Family Mode
+            </h1>
+<!-- Features List -->
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex items-start gap-4">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">1. Group grocery shopping lists</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 leading-relaxed">Collaborate on lists with your whole family in real-time</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-4">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">2. Personalized kids activities</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 leading-relaxed">Discover fun and educational in-store experiences</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-4">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 shrink-0 size-12">
+<span class="material-symbols-outlined">card_giftcard</span>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight">3. Shared loyalty reward points</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mt-1 leading-relaxed">Earn and redeem benefits faster as a collective group</p>
+</div>
+</div>
+</div>
+<!-- Spacer -->
+<div class="flex-1 min-h-[40px]"></div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 mt-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                    Set Up Family Profile
+                </button>
+<button class="w-full text-slate-400 dark:text-slate-500 font-semibold py-2 hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+                    Skip for now
+                </button>
+</div>
+</div>
+</div>
+</body></html>

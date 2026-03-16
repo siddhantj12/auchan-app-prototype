@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loyalty Experience Rewards Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6001b",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#230f11",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center bg-white dark:bg-background-dark p-4 border-b border-slate-200 dark:border-slate-800 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight flex-1 text-center">Loyalty Experience</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center h-10 w-10 bg-transparent text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<div class="max-w-md mx-auto pb-24">
+<!-- Points & Tier Section -->
+<div class="bg-white dark:bg-background-dark p-6 mb-2">
+<div class="flex flex-col items-center">
+<!-- Circular Progress Visual -->
+<div class="relative flex items-center justify-center w-48 h-48 mb-4">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-100 dark:text-slate-800" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.9" stroke-dashoffset="138.2" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<span class="text-primary text-4xl font-bold">2,450</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">pts</span>
+</div>
+</div>
+<div class="text-center">
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Gold Member</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">750 pts to reach Platinum Tier</p>
+</div>
+<div class="w-full mt-6 bg-slate-100 dark:bg-slate-800 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+<!-- Reward Marketplace -->
+<div class="py-4">
+<div class="flex items-center justify-between px-4 mb-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Reward Marketplace</h2>
+<a class="text-primary text-sm font-semibold" href="#">View All</a>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 pb-4 no-scrollbar">
+<!-- Card 1 -->
+<div class="flex-none w-64 bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-36 bg-cover bg-center relative" data-alt="A group of people in a cooking workshop" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBmfv_jz_TDwNMZtWGpZ0QbddMH4skpw9ZKzQbzFg_QBfR2A5G83JAO2MNazNK5tu8XYfV6fMGNuHc8XvK1EunOSEZMbuWt7Q8rccwSbUwzfvCFRzzR1JV2vpD-1rxVKvH1BBUqN51xIunI0itdEREkSUg-VmaxEmIuwWUgzNUgvRNzsl51dCs5Mby6vZJ8AfnL4oho-pUHqU5ztnHb6SBkTz0oldtHa9NVzv7JmG9jNY5dOVjGD9pXOMjvvF3KGOZxf-KIN06-ms');">
+<div class="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-lg">
+                            800 pts
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-1">Free Cooking Workshop</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-3">Learn Italian classics with our chef</p>
+<button class="w-full bg-primary text-white font-bold py-2 rounded-lg text-sm">Redeem</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex-none w-64 bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-36 bg-cover bg-center relative" data-alt="Family ice skating on a rink" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1aeLMsox3K5GH-MJWEP7b6M5g3HJEDWEwIjiVhWF9ibdDu--jBvmedo56vzNrfbo862rr5vrjewwJLDEDmXpieP9MkIF56SXGmTysB_loyoethfHaVcYHYccQqjZFb2v7JP5ELdFjy-XVlzJDWfo9x4wgLX46gwRWOLxSASnVjl8loxgk9vA0xFUWW9chaE2cMMgDv6meMht6jFiiBaGX-3ix055wy032j2n7WqA893HVJhGd7zibMAlGul0krX1PGcqamDEC7aY');">
+<div class="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-lg">
+                            1,200 pts
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-1">Family Skating Pass</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-3">Weekend pass for up to 4 people</p>
+<button class="w-full bg-primary text-white font-bold py-2 rounded-lg text-sm">Redeem</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex-none w-64 bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-36 bg-cover bg-center relative" data-alt="VIP event with stage lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxEbyxHKdr9ZnJvoTDd3INezYrs12HNwr-RM39OJuDEbK94GiI581xRCRA-NFKHGqb-qvznUIfX-43GqI5YHhHqvtKW7IpYxZjt9TCLtPGsS1A7LMwYZsS-DpCt51V7cZ6_hvxrFWIF34p1xElRPXyFZv6DiMezJ5KrKesV0H-FdsXSFpyApfz5RoYp35Ndn1t-gInvc3NASkRxR5swicsNOprxRRe46GCD0UJxNXORmkfIiv09n2DwhhOTvZC4RrHJkFMGFKzj-c');">
+<div class="absolute top-2 right-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-lg">
+                            2,000 pts
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-1">VIP Event Access</h4>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-3">Exclusive entry to store launch</p>
+<button class="w-full bg-primary text-white font-bold py-2 rounded-lg text-sm">Redeem</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Points History -->
+<div class="px-4 py-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold mb-4">Points History</h2>
+<div class="space-y-3">
+<!-- Activity Item -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Italian Cooking Class</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">May 12, 2024</p>
+</div>
+</div>
+<span class="text-sm font-bold text-green-600">+100 pts</span>
+</div>
+<!-- Activity Item -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Grocery Purchase</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">May 10, 2024</p>
+</div>
+</div>
+<span class="text-sm font-bold text-green-600">+45 pts</span>
+</div>
+<!-- Activity Item -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">local_activity</span>
+</div>
+<div>
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Store Opening Event</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">May 05, 2024</p>
+</div>
+</div>
+<span class="text-sm font-bold text-green-600">+250 pts</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-4 pb-6 pt-2">
+<div class="flex gap-2 max-w-md mx-auto">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">card_giftcard</span>
+<p class="text-[10px] font-medium leading-normal">Rewards</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<p class="text-[10px] font-medium leading-normal">Events</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal">Profile</p>
+</a>
+</div>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

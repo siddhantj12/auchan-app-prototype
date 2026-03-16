@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6001b",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#230f11",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<title>Family Membership Profile</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<div class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex items-center justify-between">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-center flex-1">Auchan Family</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">settings</span>
+</button>
+</div>
+<!-- Main Content Scroll Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Parent Profile Card -->
+<div class="p-4 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="size-20 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of Sophie Dupont family leader" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvgAlTjSfxsR51dlT1E8hj-wj5tHSpPM8tp6D59x2aFnKww85YIGn9FPvDYHlR85SzKH9BafoOX0RsO5Vu3zDvJI56mRAXWaCmkTjF_2TUEuWUhyX_nowmMEpuSkxAVaxTV6bt3yfO45Pgbx2e5XB9DlofwfFCB0fqIlFkNhw6dfiyW-eKjJz1an8ow9i92TpqXPx1cog7IYvUvbnOsBv8JA0-jKngdTdvJpaw6ZGlOzPKULikdpxtY4PUmDdW_Xai1MTFyS1fK7A')">
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+                        Leader
+                    </div>
+</div>
+<div class="flex-1">
+<h2 class="text-xl font-bold">Sophie Dupont</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base">military_tech</span>
+                        Loyalty Status: <span class="text-primary font-semibold">Gold</span>
+</p>
+</div>
+<button class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-bold px-3 py-2 rounded-lg">
+                    Manage
+                </button>
+</div>
+</div>
+<!-- Family Mode Toggle -->
+<div class="m-4 bg-white dark:bg-background-dark rounded-xl p-4 flex items-center justify-between shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">family_restroom</span>
+</div>
+<div>
+<p class="font-bold text-sm">Family Mode</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Unlock family-only benefits</p>
+</div>
+</div>
+<label class="relative flex h-7 w-12 cursor-pointer items-center rounded-full bg-primary/20 p-1 has-[:checked]:bg-primary transition-colors">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="h-5 w-5 rounded-full bg-white shadow-md transition-all peer-checked:translate-x-5"></div>
+</label>
+</div>
+<!-- Family Members Carousel -->
+<div class="px-4 py-2">
+<h3 class="text-base font-bold mb-3">Family Members</h3>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+<!-- Sub Profile 1 -->
+<div class="flex flex-col items-center min-w-[80px] group">
+<div class="size-16 rounded-2xl bg-orange-100 flex items-center justify-center border-2 border-white dark:border-slate-800 shadow-sm overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Cartoonish playful photo of Leo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvTe0td8zqcbqhm_H4x4s4ypIiBsmd1MIC_VFPThTZG6e3G9AB0-vsICF8P11V1G6Vv3YQO7ygEnwvkahhHhpc3SvfjH504Z6o70eWVzpyLLMHzAZ6kVe2Kt8Ak4UIIiKrAfUOyTZucy_K9TGu0mMeXCQsB48ESJSo1ClPFZEaAR4sVZKKCkNe6W3Fbu6g9R9CcYJbw5AYG3MelRA6dfkiVL_Z5znRQPO-bxUH9_Z52xTXu0qYbhrDNkNyl4oC031TmW4-BsbDq8U"/>
+</div>
+<p class="text-sm font-semibold">Leo, 7</p>
+</div>
+<!-- Sub Profile 2 -->
+<div class="flex flex-col items-center min-w-[80px]">
+<div class="size-16 rounded-2xl bg-purple-100 flex items-center justify-center border-2 border-white dark:border-slate-800 shadow-sm overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Playful photo of Mila" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzRjdY0F_VD3iFvb4WjDWq6tslxxOm4EyvuzEyXTVot4PtsGXYTp2NXbvB-gzeDJejJilz1oMinp-GXdNfdEY17JbDS1COal1rW0Htzh4YwOEDcdpF8N55j9DKlr-FSQvpzTq3PItlyIy6n9v0fgoL0uAhnTZY1B1xG0vIJuoefYuel4UIYD5OL_nLyCgIRF1--UhIYHu83m2maWd-oLyYvZCGpNc-wrqUvJsqQbJXY6p_MXrAd2n5yYxwKM8gOMEU9BE8S3YbfDs"/>
+</div>
+<p class="text-sm font-semibold">Mila, 5</p>
+</div>
+<!-- Add New -->
+<button class="flex flex-col items-center min-w-[80px]">
+<div class="size-16 rounded-2xl border-2 border-dashed border-slate-300 dark:border-slate-700 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-slate-400">add</span>
+</div>
+<p class="text-sm font-medium text-slate-400">Add</p>
+</button>
+</div>
+</div>
+<!-- Section 1: Kids Activity Recommendations -->
+<div class="mt-6">
+<div class="px-4 flex items-center justify-between mb-3">
+<h3 class="text-base font-bold">Kids Activity Recommendations</h3>
+<a class="text-primary text-sm font-semibold" href="#">See all</a>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar px-4">
+<div class="min-w-[240px] bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-32 bg-cover bg-center" data-alt="Children in a colorful workshop setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeyODhGk5jadONe7EBim0oGJWHK9w3tDZ-XMFvCxjcznFKhFM_NFF5AHkgr5CWbEghx5XdI5QA24RMcS3I43-UwKVLMVYkX7RyGmwPnNYHbVkSfE8WRJs5xVzWuykbRDpeTWx_BpBK4i7WebhzmotBUWvqU1cCuz1TZbLvRlHtXoU_kFqaxRJHVgbNVeob3PG0JnS3Gz8TkG_KiCXDrKtPGIOiMnfrXlz-8UmbgS1e53W640k_eYys7IM_Qnm0NJMn-phdaCket9E')">
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm">Weekend Kids Workshop</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Creative arts &amp; crafts</p>
+<button class="mt-3 w-full py-2 bg-primary/10 text-primary text-xs font-bold rounded-lg">Learn More</button>
+</div>
+</div>
+<div class="min-w-[240px] bg-white dark:bg-background-dark rounded-xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="h-32 bg-cover bg-center" data-alt="Outdoor skating rink for juniors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlZIaW-oLuzoreUnF0aq7n1U-YW5rw6vtZkYd2w-R5nCUDk7Q2GjxpsJh3L2S_rQPeggLstRj2FFpMqEgrfsY-pZdWqcW5aErLPTzDtfpUqG0rfD6AjdW2gs0ddrTy_dWiE07SgZ6AtrF2HpcXIRYdcGwgsA8xzCX1YeFRXqWQ1vRVleJL7JHTEb86_4TnDHIFuG9bkus_3X-dPpryFWWqY4oRzM9ksW2z7XQTFQRf0y7WRqL724CC1nqndBOjcWnIiCJhUVLMLjM')">
+</div>
+<div class="p-3">
+<h4 class="font-bold text-sm">Skating Rink Junior</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Every Sat 10:00 AM</p>
+<button class="mt-3 w-full py-2 bg-primary/10 text-primary text-xs font-bold rounded-lg">Learn More</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Family Grocery Bundles -->
+<div class="mt-8 px-4">
+<h3 class="text-base font-bold mb-4">Family Grocery Bundles</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Product Card 1 -->
+<div class="bg-white dark:bg-background-dark rounded-xl p-3 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="aspect-square bg-slate-50 dark:bg-slate-900 rounded-lg mb-2 relative flex items-center justify-center">
+<img class="w-20 h-20 object-contain" data-alt="Family Pasta Kit products" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn4daARpzhl8ewCuRqEPI05tSKguPQtuwrD7PTorjPDkEi9PDIjS7FevOiq3ES92gVfnS_iQOcZBmcxfsYJbk6-v_ehrnuhmAJ_3tjCc1FJIeeyZeFCU7qAFtzq8FF5elhG4pVt9xhle0BO_YaBVh9KwV2xSma9KXXawNoUNZ1o0IfMii0lCkJyIj9lmiTdHLXmxogBmDaLjvENFeSkXXYQ8HCYiteD8P1xxUaD_pCfKAjcj9QLdr3nA6TtE7bLXuMLSva-M8vbLM"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">SAVE 20%</span>
+</div>
+<p class="text-xs font-bold leading-tight line-clamp-2">Family Pasta Kit (Bundle of 4)</p>
+<p class="text-xs text-slate-500 mt-1">Serves 4-6 people</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<p class="text-sm font-bold text-primary">€12.50</p>
+<button class="size-8 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white dark:bg-background-dark rounded-xl p-3 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col">
+<div class="aspect-square bg-slate-50 dark:bg-slate-900 rounded-lg mb-2 relative flex items-center justify-center">
+<img class="w-20 h-20 object-contain" data-alt="Family Breakfast Bundle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO4G5wdDaRM4LNdzxkfA82bS_wpBN_4m56moSNEnzsRA2hqlacGFaiCJ6SIneABW_AbxxpXJI4GJ34zOM5olRuBRyx8oyzGb0DAJT7WQt3D-_7inQXKqEMubocc6AFc6YRYXu354Mp8-3IswEYsRLq_qpF7Jhx52D9CmdKAACR_ZtVelpfebh7z4EVJcHcBTExY3yboOb_JN6k9LCGlc2h4i5r0sdrTZrtWa9sc51blz04utDVGW4Co8cG3jj539qhirvok1U8AJs"/>
+<span class="absolute top-2 left-2 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded">OFFER</span>
+</div>
+<p class="text-xs font-bold leading-tight line-clamp-2">Breakfast Bundle (Muesli + Milk + Fruit)</p>
+<p class="text-xs text-slate-500 mt-1">Perfect for mornings</p>
+<div class="mt-auto pt-3 flex items-center justify-between">
+<p class="text-sm font-bold text-primary">€8.99</p>
+<button class="size-8 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 px-2 py-2 safe-area-bottom">
+<div class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-0.5 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-slate-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Catalog</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="text-[10px] font-medium">Family</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-slate-400" href="#">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="text-[10px] font-medium">Offers</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-slate-400 relative" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-[10px] font-medium">Cart</span>
+<span class="absolute -top-1 right-0 bg-primary text-white text-[8px] font-bold size-4 rounded-full flex items-center justify-center">3</span>
+</a>
+</div>
+</nav>
+</body></html>

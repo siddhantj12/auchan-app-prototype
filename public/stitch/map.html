@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e6001b",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#230f11",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>In-Store Experience Map</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex h-screen w-full flex-col overflow-hidden bg-white dark:bg-background-dark">
+<!-- Header / Search Section -->
+<div class="z-20 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md pt-4">
+<div class="flex items-center px-4 pb-2 justify-between">
+<div class="text-slate-900 dark:text-slate-100 flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Auchan Experience</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="text-slate-400 flex bg-white dark:bg-slate-800 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-slate-900 dark:text-slate-100 focus:outline-0 focus:ring-0 border-none bg-white dark:bg-slate-800 h-full placeholder:text-slate-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search zones (e.g. Cooking Studio)" value=""/>
+</div>
+</label>
+</div>
+</div>
+<!-- Main Map Area -->
+<div class="relative flex-1 overflow-hidden bg-slate-50 dark:bg-slate-900">
+<!-- Simulated Store Map Background -->
+<div class="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none" style="background-image: radial-gradient(#000 0.5px, transparent 0.5px); background-size: 20px 20px;"></div>
+<!-- Map Vector Elements (Simplified Layout) -->
+<div class="absolute inset-0 p-8">
+<!-- Aisle blocks -->
+<div class="grid grid-cols-4 gap-4 h-full w-full">
+<div class="bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+<div class="bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+<div class="bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+<div class="bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+<div class="bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+<div class="col-span-2 bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+<div class="bg-slate-200 dark:bg-slate-800 rounded-lg h-32 w-full"></div>
+</div>
+<!-- Pins/Markers -->
+<!-- User Location -->
+<div class="absolute top-[70%] left-[20%] z-10">
+<div class="relative">
+<div class="absolute -inset-2 bg-blue-500/30 rounded-full blur-sm"></div>
+<div class="size-4 bg-blue-500 border-2 border-white rounded-full"></div>
+</div>
+</div>
+<!-- Path to Cooking Studio -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" style="stroke-dasharray: 4 4;">
+<path d="M 120 540 Q 150 450, 320 180" fill="none" stroke="#3b82f6" stroke-width="3"></path>
+</svg>
+<!-- Experience Zone Pins -->
+<div class="absolute top-[20%] left-[70%] text-primary flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="bg-white dark:bg-slate-800 px-2 py-0.5 rounded-full text-[10px] font-bold shadow-md border border-primary/20">Cooking Studio</span>
+</div>
+<div class="absolute top-[10%] left-[30%] text-green-600 flex flex-col items-center opacity-60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="absolute top-[45%] left-[80%] text-blue-600 flex flex-col items-center opacity-60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="absolute top-[60%] left-[50%] text-purple-600 flex flex-col items-center opacity-60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="absolute top-[80%] left-[75%] text-yellow-500 flex flex-col items-center opacity-60">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<!-- Map Controls Overlay -->
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<button class="flex size-12 items-center justify-center rounded-xl bg-white dark:bg-slate-800 shadow-lg text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="flex size-12 items-center justify-center rounded-xl bg-white dark:bg-slate-800 shadow-lg text-slate-900 dark:text-slate-100">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="mt-4 flex size-12 items-center justify-center rounded-xl bg-white dark:bg-slate-800 shadow-lg text-primary">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+<!-- Bottom Sheet Slider -->
+<div class="z-30 absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 rounded-t-3xl shadow-[0_-8px_30px_rgb(0,0,0,0.12)] border-t border-slate-100 dark:border-slate-800">
+<!-- Drag Handle -->
+<div class="flex justify-center py-3">
+<div class="w-12 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+<div class="px-6 pb-8">
+<div class="flex justify-between items-start mb-4">
+<div class="flex gap-4">
+<div class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100">Cooking Studio</h3>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-sm">directions_walk</span>
+<span>2 mins walk (140m)</span>
+</div>
+</div>
+</div>
+<button class="bg-primary text-white font-bold py-2 px-6 rounded-full text-sm shadow-md shadow-primary/20">
+                        Start Path
+                    </button>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full mb-4"></div>
+<div>
+<div class="flex justify-between items-center mb-3">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">Today's Schedule</h4>
+<span class="text-xs text-primary font-bold">View all</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+<div class="text-sm font-bold text-slate-900 dark:text-slate-100 w-12">2 PM</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex-1">
+<div class="text-sm font-semibold text-slate-900 dark:text-slate-100">Artisanal Pasta Class</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Led by Chef Antoine • 45 mins</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+<div class="text-sm font-bold text-slate-400 w-12">5 PM</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex-1">
+<div class="text-sm font-semibold text-slate-900 dark:text-slate-100">Organic Wine Tasting</div>
+<div class="text-xs text-slate-500 dark:text-slate-400">Sommelier Selection • 30 mins</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Bar -->
+<div class="z-40 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 flex justify-around py-3">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="text-[10px] font-bold">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">shopping_basket</span>
+<span class="text-[10px] font-bold">List</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="text-[10px] font-bold">Pass</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">Account</span>
+</button>
+</div>
+</div>
+</body></html>
