@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --color-auchan-red: #E3001B;
+  --color-auchan-darkred: #B30015;
+}
+
 body {
   background-color: #f9fafb;
   color: #111827;
