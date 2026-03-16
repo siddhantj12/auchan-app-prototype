@@ -22,21 +22,11 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-black font-sans w-full md:max-w-md mx-auto shadow-2xl relative overflow-hidden">
-        {/* Mobile Status Bar Simulation */}
-        <div className="bg-white sticky top-0 z-50 px-6 py-2 flex justify-between items-center text-sm font-medium">
-          <span>9:41</span>
-          <div className="flex items-center gap-2">
-            <span className="w-4 h-4 rounded-full border-2 border-black" />
-            <span className="w-4 h-4 bg-black rounded-sm" />
-            <span className="w-6 h-3 bg-black rounded-sm" />
-          </div>
-        </div>
-
+      <div className="min-h-[100dvh] bg-white font-sans w-full md:max-w-md mx-auto shadow-2xl relative overflow-hidden">
         <ToastContainer />
         <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
 
-        <div className="relative z-0 h-[calc(100vh-80px)] overflow-y-auto bg-white">
+        <div className="relative z-0 h-[100dvh] overflow-y-auto bg-white pt-safe">
           <Routes>
             <Route path="/" element={<Navigate to="/onboarding" replace />} />
             <Route path="/onboarding" element={<Onboarding />} />
